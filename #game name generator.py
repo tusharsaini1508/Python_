@@ -1,0 +1,11 @@
+#game name generator
+print('enter your name')
+name=input()
+print(f"hellow {name}, welcome to game name generator")
+print('enter the name of your pet')
+pet_name=input()
+print('enter the name of your city')
+city_name=input()
+pet_name_slicing=(pet_name[0:3])
+city_name_slicing=(city_name[0:2])
+print(pet_name_slicing+city_name_slicing)
