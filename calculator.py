@@ -1,4 +1,4 @@
-x=float(input("enter teh value of first number"))
+x=float(input("enter the value of first number"))
 y=float(input("enter the value of second number"))
 calculation=input("enter the choice +,-,*,/")
 if calculation=="+":
