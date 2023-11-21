@@ -7,7 +7,7 @@ print(f"we will send you notification on your number{phone_number}")
 Bill=int(input("Enter your bill in $"))
 print(f"Your bill is {Bill}$")
 
-tip=int(input("Enter your tip anything you want"))
+tip=int(input("Enter your tip % anything you want"))
 print(f"your tip is {tip}%")
 
 Final_tip=Bill*(tip/100)
