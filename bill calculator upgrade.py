@@ -1,54 +1,49 @@
-choice=int(input("Enter your choice 1 for bill 2 for feedback:= "))
-if choice==1:
-    name=input("Enter your name:= ")
-    print(f"hii {name} Welcome in bill calculator")
 
-    phone_number=int(input("Enter your phone number"))
-    print(f"we will send you notification on your number =: {phone_number}")
+name = input("Enter your name: ")
+print(f"Hello {name}! Welcome to the bill calculator.")
 
-    address=input("Enter your address := ")
-    print(f"we can also deliver the food on your address =: {address}")
+while True:
+    phone_number = input("Enter your phone number: ")
 
-    Bill=int(input("Enter your bill in $"))
-    print(f"Your bill is {Bill}$")
-
-    tip=int(input("Enter your tip % anything you want"))
-    print(f"your tip is {tip}%")
-
-    Final_tip=Bill*(tip/100)
-    Total_bill=Bill+Final_tip
-    print(f"Your total bill is :=  {Total_bill}$")
-
-    #lucky draw for customers
-
-    lucky_draw=int(input("Enter the number from 1111,2222,3333,4444 :=  "))
-    if lucky_draw==1111:
-      print(f"Congratulations you won a vocher of{Total_bill*13/100}$")
-    elif lucky_draw==2222:
-      print(f"Congratulations you won a vocher of {Total_bill*19/100}$ ")
-
-    elif lucky_draw==3333:
-      print(f"Congratulations you won a vocher of {Total_bill*17/100}")
-
-    elif lucky_draw==4444:
-      print(f"Congratulations you won a vocher of {Total_bill*15/100}")
-
+    if phone_number.isdigit() and len(phone_number) == 10:
+        print(f"We will send you notifications on your number: {phone_number}")
+        break  
     else:
-      print("Sorry you didn't win")
+        print("Enter a valid 10-digit phone number.")
 
-    split=int(input("Enter how many person want to share the bill := "))
-    Total_bill_per_person=Total_bill/split
-    round_Bill=round(Total_bill_per_person,2)
-    print(f"hii {name} you should pay the bill of {round_Bill}$")
+address = input("Enter your address: ")
+print(f"We can also deliver the food to your address: {address}")
 
-    print(f"{name} Thank you for visiting our cafe see you again")
+while True:
+ Bill = float(input("Enter your bill in $: "))
+ if type(Bill) == float or int:
+   print(f"Your bill is {Bill}$")
+   break
+ else:
+  print("Enter a valid bill")
+ 
+while True:  
+ tip = float(input("Enter your tip % (any value you want): "))
+ if type(tip) == float or int:
+   print(f"Your tip is {tip}%")
+   break
+
+ else:
+    print("Enter a valid tip")
+  
 
 
-elif choice==2:
+Final_tip = Bill * (tip / 100)
+Total_bill = Bill + Final_tip
+print(f"Your total bill is: {Total_bill}$")
 
+# Lucky draw for customers
+lucky_draw = int(input("Enter the number (1111, 2222, 3333, 4444): "))
 
-    feedback=input("Enter your feedback")
-    print(f"Thank you for your feedback {feedback}")
+split = int(input("Enter how many people want to share the bill: "))
+Total_bill_per_person = Total_bill / split
+round_Bill = round(Total_bill_per_person, 2)
+print(f"Hi {name}, you should pay the bill of {round_Bill}$")
 
-else:
-    print("Invalid choice")
+print(f"{name}, thank you for visiting our cafe. See you again!")
+
