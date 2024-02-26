@@ -1,0 +1,49 @@
+import turtle as tur        
+import colorsys as cs   
+import random
+# name=input("Enter your name :=")      
+choice=int(input('Enter your choice 1 for the random rangoli 2 for the custom rangoli:=--->:  '))
+if choice==1:
+ list=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+ fi_list=random.choice(list)   
+ tur.setup(800, 800)
+ tur.speed(0)
+ tur.tracer(10)
+ tur.width(2)                
+ tur.bgcolor("black")
+
+ for j in range(30):          
+    for i in range(fi_list):      
+        tur.color(cs.hsv_to_rgb(i /15, 1, 1))
+        
+        tur.right(90)
+        tur.circle(200 - j * 6, 90)
+        tur.left(90)
+        tur.circle(200 - j * 6, 90)
+        tur.right(180)
+        tur.circle(50, 24)
+ tur.hideturtle()          
+ tur.done() 
+
+if choice ==2:
+ user_choice=int(input("Enter the number of lines in rangoli--->:  "))
+ tur.setup(800, 800)
+ tur.speed(0)
+ tur.tracer(10)
+ tur.width(2)                
+ tur.bgcolor("black")
+
+ for j in range(30):          
+    for i in range(user_choice):      
+        tur.color(cs.hsv_to_rgb(i /15, 1, 1))
+        
+        tur.right(90)
+        tur.circle(200 - j * 6, 90)
+        tur.left(90)
+        tur.circle(200 - j * 6, 90)
+        tur.right(180)
+        tur.circle(50, 24)
+ tur.hideturtle()          
+ tur.done() 
+else:
+    print("invalid input")    
